@@ -79,7 +79,7 @@ public class MenuService : IMenuService
             contact.Email = InputContactInfoAndCannotBeEmpty("Email");
             if (!ValidEmailOrInvalidEmail(contact.Email))
             {
-                ClearTitleSpace("This input <{contact.Email}> is not a valid email"); 
+                ClearTitleSpace($"This input <{contact.Email}> is not a valid email"); 
             }
             else
                 break;
@@ -139,6 +139,7 @@ public class MenuService : IMenuService
                     if (answer == "y") // Spelar ingen roll om man skriver y eller Y, inmatningen blir allt till små bokstäver
                         continue;
                     else
+                        ClearTitleSpace("Press Enter to go back to Main Menu");
                         isGoing = false;
                     break;
             }
@@ -206,6 +207,7 @@ public class MenuService : IMenuService
                     if (answer == "y")
                         continue;
                     else
+                        ClearTitleSpace("Press Enter to go back to Main Menu");
                         isGoing = false;
                         break;
             }

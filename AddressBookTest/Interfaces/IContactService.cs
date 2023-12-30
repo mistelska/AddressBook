@@ -1,13 +1,9 @@
 ﻿using AddressBookTest.Models;
-using AddressBookTest.Models.Responses;
-
 namespace AddressBookTest.Interfaces;
-
-// CRUD CREATE READ UPDATE DELETE (??)
-public interface IContactService
+public interface IContactService //Interface för ContactService med 4 st metoder
 {
-    IServiceResult AddContactToList(IContact contact);
-    IServiceResult GetOneContactFromList(string fullName);
-    IServiceResult GetAllContactsFromList();
+    IServiceResult AddContactToList(Contact contact);
+    IServiceResult GetOneContactFromList(string email);
+    IEnumerable<Contact> GetAllContactsFromList();
     IServiceResult DeleteContactFromEmail(string email);
 }
